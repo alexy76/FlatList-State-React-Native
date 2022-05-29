@@ -9,7 +9,7 @@ const Card = ({data}) => (
     <View style={styles.containerCard}>
         <CardHeader price={data.price} />
         <CardBody picture={data.photo} />
-        <CardFooter desc={data.desc} title={data.title} />
+        <CardFooter desc={data.desc} title={data.title} likes={data.likes} userLikedProduct={data.userLike} />
     </View>
 )
 

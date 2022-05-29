@@ -9,6 +9,7 @@ const HomeScreen = () => {
   const [text, setText] = useState("")
   const [dataSearch, setDataSearch] = useState([])
 
+  
   const searchModelData = (textInput) => {
     textInput 
     ? setDataSearch(listData.filter(elt => Number(elt.price) < Number(textInput))) 
@@ -18,6 +19,10 @@ const HomeScreen = () => {
 
   useEffect(() => {
     setDataSearch(listData)
+
+    return () => {
+
+    }
   }, [])
 
   return (

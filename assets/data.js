@@ -1,6 +1,7 @@
 const PRODUITS = [
   {
     id: "1",
+    userLike: false,
     brand: "Lidl",
     title: "Taglia",
     desc: "Baskets TGL EU ",
@@ -12,6 +13,7 @@ const PRODUITS = [
   },
   {
     id: "2",
+    userLike: true,
     brand: "Nike",
     title: "Air max 96 supreme",
     desc: "La première Air Max lifestyle de Nike vous offre style et confort à travers la Nike Air Max 270",
@@ -23,6 +25,7 @@ const PRODUITS = [
   },
   {
     id: "3",
+    userLike: false,
     brand: "Nike",
     title: "AIR HUARACHE 'OLIVE'",
     desc: "La Nike Air Huarache Ultra est une version repensée, plus confortable et plus flexible que sa grande soeur.",
@@ -34,6 +37,7 @@ const PRODUITS = [
   },
   {
     id: "4",
+    userLike: true,
     brand: "Nike",
     title: "AF1 bronx",
     desc: "Nike Sportswear rend hommage au « Bronx » avec une Air More Money inédite inspirée du célèbre quartier new yorkais",
@@ -45,6 +49,7 @@ const PRODUITS = [
   },
   {
     id: "5",
+    userLike: false,
     brand: "Balenciaga",
     title: "sneaker speed recycled",
     desc: "Sneaker Speed Recycled en maille recyclée noire avec semelle extérieure blanche et noire",
@@ -56,6 +61,7 @@ const PRODUITS = [
   },
   {
     id: "6",
+    userLike: false,
     brand: "Nike",
     title: "Jordan 1 High Hyper Royal",
     desc: "Inspirée de la première AJ1, la chaussure Air Jordan 1 Mid propose aux fans des Jordan rétro de suivre les traces de la grandeur.",
@@ -67,17 +73,19 @@ const PRODUITS = [
   },
   {
     id: "7",
+    userLike: false,
     brand: "Emporio Armani",
     title: "Sock sneakers montantes en maille lurex",
     desc: "Emporio Armani revisite les sock sneakers. S’inspirant des chaussettes de sport, ce modèle offre fonctionnalité et ",
     price: "120",
-    likes: "4",
+    likes: "16",
     size: "43",
     stocked: "false",
     photo: require("./img/7.png"),
   },
   {
     id: "8",
+    userLike: false,
     brand: "Adidas",
     title: "Yeezy boost 350v2 Sand Taupe",
     desc: "La populaire lowtop se pare d’une tige en Primeknit beige, rappelant légèrement le coloris Antlia, contrastée par une bande latérale bleutée ainsi que par une doublure bleue claire",
@@ -89,6 +97,7 @@ const PRODUITS = [
   },
   {
     id: "9",
+    userLike: true,
     brand: "Nike",
     title: "Air max 97 off White mentha",
     desc: "Revendiquez votre côté rebelle avec votre Nike Air Max Plus, un modèle Air novateur qui offre une stabilité optimale et un amorti exceptionnel. ",
@@ -100,6 +109,7 @@ const PRODUITS = [
   },
   {
     id: "10",
+    userLike: false,
     brand: "Alexander McQueen",
     title: "Alexander McQueen Baskets oversize en cuir",
     desc: "Les classiques baskets basses d'Alexander McQueen sont ici revisitées avec d'imposantes semelles en caoutchouc blanc. Ce modèle a été fabriqué à partir de cuir noir et arbore un logo doré sur le talon.",
@@ -111,6 +121,7 @@ const PRODUITS = [
   },
   {
     id: "11",
+    userLike: false,
     brand: "Nike",
     title: "AF1 ART BROKEN SWOOSH",
     desc: "Nous nous sommes amusé à détacher le symbole Nike et à le découper pour le repositionner en morceaux de toutes les couleurs. Ne soyez pas surpris on va vous regarder dans les chaussures.",
@@ -122,6 +133,7 @@ const PRODUITS = [
   },
   {
     id: "12",
+    userLike: false,
     brand: "Nike",
     title: "AF1 BANSKSY FILLE AU BALLONS",
     desc: "Ce modèle street Art Bansksy rend hommage aux maux de la société avec une approche graphique unique.",
@@ -133,6 +145,7 @@ const PRODUITS = [
   },
   {
     id: "13",
+    userLike: false,
     brand: "Nike",
     title: "AF1 BLUE SKY LV",
     desc: "Un hommage à la marque Louis Vuitton avec des couleurs douces.",
@@ -144,6 +157,7 @@ const PRODUITS = [
   },
   {
     id: "14",
+    userLike: false,
     brand: "Nike",
     title: "AF1 BURBERRY LION",
     desc: "Ce modèle Burberry et lion est superbe pour les amoureux de custom et son succès est au rendez vous.",
@@ -155,6 +169,7 @@ const PRODUITS = [
   },
   {
     id: "15",
+    userLike: false,
     brand: "Adidas",
     title: "STAN SMITH HARRY POTTER",
     desc: "Avec ce thème Harry Potter préparez votre balai !",
@@ -166,6 +181,7 @@ const PRODUITS = [
   },
   {
     id: "16",
+    userLike: true,
     brand: "Adidas",
     title: "STAN SMITH MICHEL ANGE LA CRÉATION D'ADAM",
     desc: "Avec ce thème Grand Maître vous affichez votre gout pour la culture",
@@ -177,6 +193,7 @@ const PRODUITS = [
   },
   {
     id: "17",
+    userLike: true,
     brand: "Adidas",
     title: "STAN SMITH TINTIN 2.0",
     desc: "Avec ce thème Tintin 2.0 encore une raison d'afficher votre amour pour le monde d'Hergé",
@@ -188,6 +205,7 @@ const PRODUITS = [
   },
   {
     id: "18",
+    userLike: false,
     brand: "Adidas",
     title: "COLOR GEOMETRIC",
     desc: "Avec ce thème Multicolors vous serez pour des années à la mode",
@@ -199,40 +217,48 @@ const PRODUITS = [
   },
   {
     id: "19",
+    userLike: false,
     brand: "Converse",
     title: "ASTROWORLD",
     desc: "Ce modèle Astroword est le hommage à l'artiste Travis Scott et son album du même nom.",
     price: "109",
+    likes: "6",
     size: "toutes tailles",
     stocked: "true",
     photo: require("./img/converse/astroworld_1.png"),
   },
   {
     id: "20",
+    userLike: false,
     brand: "Converse",
     title: "CDG",
     desc: 'Ce modèle d\'inspiration "Comme des Garçons" est unique et fera tourner les têtes de vos amis et relations',
     price: "99",
+    likes: "9",
     size: "toutes tailles",
     stocked: "true",
     photo: require("./img/converse/CDG_1.png"),
   },
   {
     id: "21",
+    userLike: false,
     brand: "Converse",
     title: "GROOT",
     desc: "Ce modèle Marvel est un classique efficace !",
     price: "99",
+    likes: "3",
     size: "toutes tailles",
     stocked: "true",
     photo: require("./img/converse/groot_1.png"),
   },
   {
     id: "22",
+    userLike: true,
     brand: "Converse",
     title: "WAVE",
     desc: "Ce modèle WAVE ont une forte présence et vous ne vous laisserez surfer sur la vague du succès.",
     price: "119",
+    likes: "15",
     size: "toutes tailles",
     stocked: "true",
     photo: require("./img/converse/wave_1.png"),
