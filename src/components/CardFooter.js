@@ -4,18 +4,15 @@ import React, { useState } from 'react'
 
 const CardFooter = ({desc, title, likes, userLikedProduct}) => {
 
-  
   const [userLiked, setUserLiked] = useState(userLikedProduct)
   const [counterLike, setCounterLike] = useState(likes)
-  const [imageLiked, setImageLiked] = useState(!userLiked ? require('../../assets/img/like.png') : require('../../assets/img/likefull.png'))
 
   const likeDislike = () => {
 
     userLiked ? setCounterLike(Number(counterLike) - 1) : setCounterLike(Number(counterLike) + 1)
-    setImageLiked(userLiked ? require('../../assets/img/like.png') : require('../../assets/img/likefull.png'))
+
     setUserLiked(!userLiked)
   }
-
 
 
   return (
@@ -40,7 +37,7 @@ const CardFooter = ({desc, title, likes, userLikedProduct}) => {
         <View style={styles.imageLiked} >
 
           <TouchableOpacity onPress={likeDislike} style={styles.buttonLike}>
-            <Image source={imageLiked} style={styles.imageSize} />
+            <Image source={!userLiked ? require('../../assets/img/like.png') : require('../../assets/img/likefull.png')} style={styles.imageSize} />
           </TouchableOpacity>
 
         </View>
